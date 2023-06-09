@@ -1,0 +1,160 @@
+Script started on 2023-06-09 06:25:06+03:00 [TERM="xterm-256color" TTY="/dev/pts/4" COLUMNS="133" LINES="26"]
+[?2004h]0;nikogenix@PC: /mnt/e/Coding/fullstackopen/fso-part12/script-answers[01;32mnikogenix@PC[00m:[01;34m/mnt/e/Coding/fullstackopen/fso-part12/script-answers[00m$ [7mdocker image pull hello-world[27mdocker image pull hello-world
+[?2004l
+Using default tag: latest
+latest: Pulling from library/hello-world
+Digest: sha256:fc6cf906cbfa013e80938cdf0bb199fbdbb86d6e3e013783e5a766f50f5dbce0
+Status: Image is up to date for hello-world:latest
+docker.io/library/hello-world:latest
+[?2004h]0;nikogenix@PC: /mnt/e/Coding/fullstackopen/fso-part12/script-answers[01;32mnikogenix@PC[00m:[01;34m/mnt/e/Coding/fullstackopen/fso-part12/script-answers[00m$ [7mdocker container run hello-world[27mdocker container run hello-world
+[?2004l
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[?2004h]0;nikogenix@PC: /mnt/e/Coding/fullstackopen/fso-part12/script-answers[01;32mnikogenix@PC[00m:[01;34m/mnt/e/Coding/fullstackopen/fso-part12/script-answers[00m$ [7mdocker run -it ubuntu bash[27mdocker run -it ubuntu bash
+[?2004l
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K
+837dd4791cdc: Pulling fs layer 
+[1B[1A[2K
+837dd4791cdc: Downloading [>                                                  ]  311.3kB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Downloading [===>                                               ]  2.161MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Downloading [=========>                                         ]   5.88MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Downloading [================>                                  ]  9.898MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Downloading [=======================>                           ]  13.91MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Downloading [==============================>                    ]  17.93MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Downloading [=====================================>             ]  21.94MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Downloading [===========================================>       ]  25.95MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Verifying Checksum 
+[1B[1A[2K
+837dd4791cdc: Download complete 
+[1B[1A[2K
+837dd4791cdc: Extracting [>                                                  ]  327.7kB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [=======>                                           ]   4.26MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [=============>                                     ]  7.864MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [================>                                  ]  9.503MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [=======================>                           ]  14.09MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [==================================>                ]  20.32MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [==========================================>        ]   24.9MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [===========================================>       ]  25.89MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [===============================================>   ]  28.18MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [=================================================> ]  29.16MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [=================================================> ]  29.49MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Extracting [==================================================>]  29.53MB/29.53MB
+[1B[1A[2K
+837dd4791cdc: Pull complete 
+[1BDigest: sha256:ac58ff7fe25edc58bdf0067ca99df00014dbd032e2246d30a722fa348fd799a5
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@a389157cb766: /root@a389157cb766:/# ls -la
+[?2004l
+total 56
+drwxr-xr-x   1 root root 4096 Jun  9 03:28 [0m[01;34m.[0m
+drwxr-xr-x   1 root root 4096 Jun  9 03:28 [01;34m..[0m
+-rwxr-xr-x   1 root root    0 Jun  9 03:28 [01;32m.dockerenv[0m
+lrwxrwxrwx   1 root root    7 May 22 14:04 [01;36mbin[0m -> [01;34musr/bin[0m
+drwxr-xr-x   2 root root 4096 Apr 18  2022 [01;34mboot[0m
+drwxr-xr-x   5 root root  360 Jun  9 03:28 [01;34mdev[0m
+drwxr-xr-x   1 root root 4096 Jun  9 03:28 [01;34metc[0m
+drwxr-xr-x   2 root root 4096 Apr 18  2022 [01;34mhome[0m
+lrwxrwxrwx   1 root root    7 May 22 14:04 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx   1 root root    9 May 22 14:04 [01;36mlib32[0m -> [01;34musr/lib32[0m
+lrwxrwxrwx   1 root root    9 May 22 14:04 [01;36mlib64[0m -> [01;34musr/lib64[0m
+lrwxrwxrwx   1 root root   10 May 22 14:04 [01;36mlibx32[0m -> [01;34musr/libx32[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34mmedia[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34mmnt[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34mopt[0m
+dr-xr-xr-x 299 root root    0 Jun  9 03:28 [01;34mproc[0m
+drwx------   2 root root 4096 May 22 14:07 [01;34mroot[0m
+drwxr-xr-x   5 root root 4096 May 22 14:07 [01;34mrun[0m
+lrwxrwxrwx   1 root root    8 May 22 14:04 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34msrv[0m
+dr-xr-xr-x  11 root root    0 Jun  9 03:28 [01;34msys[0m
+drwxrwxrwt   2 root root 4096 May 22 14:07 [30;42mtmp[0m
+drwxr-xr-x  14 root root 4096 May 22 14:04 [01;34musr[0m
+drwxr-xr-x  11 root root 4096 May 22 14:07 [01;34mvar[0m
+[?2004h]0;root@a389157cb766: /root@a389157cb766:/# mkdir usr/src/app
+[?2004l
+[?2004h]0;root@a389157cb766: /root@a389157cb766:/# mkdir usr/src/app[11Pls -la
+[?2004l
+total 60
+drwxr-xr-x   1 root root 4096 Jun  9 03:28 [0m[01;34m.[0m
+drwxr-xr-x   1 root root 4096 Jun  9 03:28 [01;34m..[0m
+-rwxr-xr-x   1 root root    0 Jun  9 03:28 [01;32m.dockerenv[0m
+lrwxrwxrwx   1 root root    7 May 22 14:04 [01;36mbin[0m -> [01;34musr/bin[0m
+drwxr-xr-x   2 root root 4096 Apr 18  2022 [01;34mboot[0m
+drwxr-xr-x   5 root root  360 Jun  9 03:28 [01;34mdev[0m
+drwxr-xr-x   1 root root 4096 Jun  9 03:28 [01;34metc[0m
+drwxr-xr-x   2 root root 4096 Apr 18  2022 [01;34mhome[0m
+lrwxrwxrwx   1 root root    7 May 22 14:04 [01;36mlib[0m -> [01;34musr/lib[0m
+lrwxrwxrwx   1 root root    9 May 22 14:04 [01;36mlib32[0m -> [01;34musr/lib32[0m
+lrwxrwxrwx   1 root root    9 May 22 14:04 [01;36mlib64[0m -> [01;34musr/lib64[0m
+lrwxrwxrwx   1 root root   10 May 22 14:04 [01;36mlibx32[0m -> [01;34musr/libx32[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34mmedia[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34mmnt[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34mopt[0m
+dr-xr-xr-x 299 root root    0 Jun  9 03:28 [01;34mproc[0m
+drwx------   2 root root 4096 May 22 14:07 [01;34mroot[0m
+drwxr-xr-x   5 root root 4096 May 22 14:07 [01;34mrun[0m
+lrwxrwxrwx   1 root root    8 May 22 14:04 [01;36msbin[0m -> [01;34musr/sbin[0m
+drwxr-xr-x   2 root root 4096 May 22 14:04 [01;34msrv[0m
+dr-xr-xr-x  11 root root    0 Jun  9 03:28 [01;34msys[0m
+drwxrwxrwt   2 root root 4096 May 22 14:07 [30;42mtmp[0m
+drwxr-xr-x   1 root root 4096 May 22 14:04 [01;34musr[0m
+drwxr-xr-x  11 root root 4096 May 22 14:07 [01;34mvar[0m
+[?2004h]0;root@a389157cb766: /root@a389157cb766:/# cd usr/src/app/
+[?2004l
+[?2004h]0;root@a389157cb766: /usr/src/approot@a389157cb766:/usr/src/app# ls
+[?2004l
+[?2004h]0;root@a389157cb766: /usr/src/approot@a389157cb766:/usr/src/app# touch index.js
+[?2004l
+[?2004h]0;root@a389157cb766: /usr/src/approot@a389157cb766:/usr/src/app# ls
+[?2004l
+index.js
+[?2004h]0;root@a389157cb766: /usr/src/approot@a389157cb766:/usr/src/app# exit
+[?2004l
+exit
+[?2004h]0;nikogenix@PC: /mnt/e/Coding/fullstackopen/fso-part12/script-answers[01;32mnikogenix@PC[00m:[01;34m/mnt/e/Coding/fullstackopen/fso-part12/script-answers[00m$ exit
+[?2004l
+exit
+
+Script done on 2023-06-09 06:30:18+03:00 [COMMAND_EXIT_CODE="0"]
