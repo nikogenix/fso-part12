@@ -4,7 +4,7 @@ const Books = ({ show, books, genre, setGenre }) => {
 	let [genres, setGenres] = useState(["all"]);
 
 	useEffect(() => {
-		if (!books.loading && books.data.allBooks && genre === "all") {
+		if (!books.loading && books?.data?.allBooks && genre === "all") {
 			const newGenres = ["all"];
 			books.data.allBooks.forEach((b) => {
 				b.genres.forEach((g) => {
@@ -25,7 +25,7 @@ const Books = ({ show, books, genre, setGenre }) => {
 		return null;
 	}
 
-	if (books.loading) {
+	if (books.loading || !books.data) {
 		return <div>loading...</div>;
 	}
 
@@ -49,7 +49,7 @@ const Books = ({ show, books, genre, setGenre }) => {
 						<th>author</th>
 						<th>published</th>
 					</tr>
-					{books.data.allBooks.map((b) => (
+					{books?.data?.allBooks.map((b) => (
 						<tr key={b.title}>
 							<td>{b.title}</td>
 							<td>{b.author.name}</td>

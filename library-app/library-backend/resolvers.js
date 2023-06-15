@@ -4,9 +4,9 @@ const jwt = require("jsonwebtoken");
 const { PubSub } = require("graphql-subscriptions");
 const pubsub = new PubSub();
 
-const Book = require("./models/Book");
-const Author = require("./models/Author");
-const User = require("./models/User");
+const Book = require("./mongo/models/Book");
+const Author = require("./mongo/models/Author");
+const User = require("./mongo/models/User");
 
 const resolvers = {
 	Query: {

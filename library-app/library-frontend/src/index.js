@@ -18,11 +18,17 @@ const authLink = setContext((_, { headers }) => {
 	};
 });
 
+const baseUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000";
+
 const httpLink = createHttpLink({
-	uri: "http://localhost:4000",
+	uri: baseUrl,
 });
 
-const wsLink = new GraphQLWsLink(createClient({ url: "ws://localhost:4000" }));
+let wsBaseUrl;
+if (baseUrl.startsWith("http://")) wsBaseUrl = baseUrl.replace("http://", "ws://");
+else if (baseUrl.startsWith("https://")) wsBaseUrl = baseUrl.replace("https://", "wss://");
+
+const wsLink = new GraphQLWsLink(createClient({ url: wsBaseUrl }));
 
 const splitLink = split(
 	({ query }) => {

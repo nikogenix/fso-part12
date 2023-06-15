@@ -11,10 +11,7 @@ const { useServer } = require("graphql-ws/lib/use/ws");
 
 const jwt = require("jsonwebtoken");
 
-const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
-
-const User = require("./models/User");
+const { User } = require("./mongo");
 
 const typeDefs = require("./schema");
 const resolvers = require("./resolvers");
@@ -22,18 +19,6 @@ const resolvers = require("./resolvers");
 require("dotenv").config();
 
 const JWT_SECRET = process.env.JWT_SECRET;
-const MONGODB_URI = process.env.MONGODB_URI;
-
-console.log("connecting to", MONGODB_URI);
-
-mongoose
-	.connect(MONGODB_URI)
-	.then(() => {
-		console.log("connected to MongoDB");
-	})
-	.catch((error) => {
-		console.log("error connection to MongoDB:", error.message);
-	});
 
 const start = async () => {
 	const app = express();
@@ -81,7 +66,7 @@ const start = async () => {
 		})
 	);
 
-	const PORT = 4000;
+	const PORT = process.env.PORT || 4000;
 
 	httpServer.listen(PORT, () => console.log(`server is now running at http://localhost:${PORT}`));
 };

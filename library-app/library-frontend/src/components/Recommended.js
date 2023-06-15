@@ -6,7 +6,7 @@ const Recommended = ({ show, user }) => {
 	const [getRecommendedBooks, { loading, called, data }] = useLazyQuery(FILTERED_BOOKS);
 
 	useEffect(() => {
-		if (show) {
+		if (show && user?.data?.me?.favoriteGenre) {
 			getRecommendedBooks({ variables: { genre: user.data.me.favoriteGenre } });
 		}
 	}, [show, user]);
